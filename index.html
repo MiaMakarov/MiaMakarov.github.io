@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mia Makarov | Portfolio</title>
+  <style>
+    :root {
+      --bg: #0f0f14;
+      --bg-alt: #16161d;
+      --text: #eaeaf0;
+      --text-muted: #9a9aa8;
+      --accent: #7c9eff;
+      --border: #26262f;
+      --max-width: 900px;
+    }
+ 
+    * {
+      box-sizing: border-box;
+    }
+ 
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+ 
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+ 
+    a:hover {
+      text-decoration: underline;
+    }
+ 
+    header {
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      background: var(--bg);
+      z-index: 10;
+    }
+ 
+    nav {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 1.5rem;
+    }
+ 
+    nav .logo {
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--text);
+    }
+ 
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
+    }
+ 
+    nav ul li a {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+ 
+    nav ul li a:hover {
+      color: var(--text);
+      text-decoration: none;
+    }
+ 
+    section {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 4rem 1.5rem;
+    }
+ 
+    #hero {
+      padding-top: 6rem;
+      padding-bottom: 5rem;
+    }
+ 
+    #hero h1 {
+      font-size: 2.5rem;
+      margin: 0 0 0.5rem;
+    }
+ 
+    #hero .tagline {
+      font-size: 1.2rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+ 
+    #hero .cta {
+      display: inline-block;
+      padding: 0.6rem 1.4rem;
+      border: 1px solid var(--accent);
+      border-radius: 6px;
+      color: var(--accent);
+      font-weight: 600;
+    }
+ 
+    #hero .cta:hover {
+      background: var(--accent);
+      color: var(--bg);
+      text-decoration: none;
+    }
+ 
+    h2 {
+      font-size: 1.6rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.5rem;
+    }
+ 
+    #about p {
+      color: var(--text-muted);
+      max-width: 65ch;
+    }
+ 
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+    }
+ 
+    .project-card {
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+    }
+ 
+    .project-card h3 {
+      margin: 0 0 0.5rem;
+      font-size: 1.1rem;
+    }
+ 
+    .project-card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      flex-grow: 1;
+    }
+ 
+    .project-card .links {
+      margin-top: 1rem;
+      display: flex;
+      gap: 1rem;
+      font-size: 0.9rem;
+    }
+ 
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      padding: 0;
+      list-style: none;
+    }
+ 
+    .skills-list li {
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 0.35rem 0.9rem;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+ 
+    #contact ul {
+      list-style: none;
+      padding: 0;
+    }
+ 
+    #contact li {
+      margin-bottom: 0.5rem;
+    }
+ 
+    footer {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      padding: 2rem 1.5rem;
+      border-top: 1px solid var(--border);
+    }
+ 
+    @media (max-width: 600px) {
+      nav ul {
+        gap: 1rem;
+      }
+ 
+      #hero h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+ 
+  <header>
+    <nav>
+      <span class="logo">Mia Makarov</span>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+ 
+  <section id="hero">
+    <h1>Hi, I'm Mia Makarov</h1>
+    <p class="tagline">A short one-line description of what you do — e.g. "Computer Science student building web apps and data tools."</p>
+    <a class="cta" href="#projects">View my work</a>
+  </section>
+ 
+  <section id="about">
+    <h2>About</h2>
+    <p>
+      Write two or three sentences here about who you are, what you're studying or working on,
+      and what you're interested in. Keep it conversational — this is the first thing recruiters
+      or visitors will read after your headline.
+    </p>
+  </section>
+ 
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+ 
+      <div class="project-card">
+        <h3>Project One</h3>
+        <p>One or two sentences describing what this project does and what you used to build it (e.g. Python, HTML/CSS, an API).</p>
+        <div class="links">
+          <a href="#">Live Demo</a>
+          <a href="#">GitHub</a>
+        </div>
+      </div>
+ 
+      <div class="project-card">
+        <h3>Project Two</h3>
+        <p>One or two sentences describing what this project does and what you used to build it.</p>
+        <div class="links">
+          <a href="#">Live Demo</a>
+          <a href="#">GitHub</a>
+        </div>
+      </div>
+ 
+      <div class="project-card">
+        <h3>Project Three</h3>
+        <p>One or two sentences describing what this project does and what you used to build it.</p>
+        <div class="links">
+          <a href="#">Live Demo</a>
+          <a href="#">GitHub</a>
+        </div>
+      </div>
+ 
+    </div>
+  </section>
+ 
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul class="skills-list">
+      <li>Python</li>
+      <li>HTML/CSS</li>
+      <li>JavaScript</li>
+      <li>Git &amp; GitHub</li>
+      <li>SQL</li>
+      <li>Data Analysis</li>
+    </ul>
+  </section>
+ 
+  <section id="contact">
+    <h2>Contact</h2>
+    <ul>
+      <li>Email: <a href="mailto:miagracecharlotte00@gmail.com">miagracecharlotte00@gmail.com</a></li>
+      <li>GitHub: <a href="https://github.com/MiaMakarov" target="_blank" rel="noopener">github.com/MiaMakarov</a></li>
+      <li>LinkedIn: <a href="#" target="_blank" rel="noopener">linkedin.com/in/your-profile</a></li>
+    </ul>
+  </section>
+ 
+  <footer>
+    &copy; 2026 Mia Makarov. Built with HTML &amp; CSS, hosted on GitHub Pages.
+  </footer>
+ 
+</body>
+</html>
